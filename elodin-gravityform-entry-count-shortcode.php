@@ -3,7 +3,7 @@
 	Plugin Name: Elodin Gravity Form Count
 	Plugin URI: https://elod.in
     Description: Just another Gravity forms addon to display the number of entries
-	Version: 1.0
+	Version: 1.0.1
     Author: Jon Schroeder
     Author URI: https://elod.in
 
@@ -28,7 +28,7 @@ if ( !defined( 'ABSPATH' ) ) {
 define( 'ELODIN_GFORM_COUNT', dirname( __FILE__ ) );
 
 // Define the version of the plugin
-define ( 'ELODIN_GFORM_COUNT_VERSION', '0.1' );
+define ( 'ELODIN_GFORM_COUNT_VERSION', '1.0.1' );
 
 add_action( 'wp_enqueue_scripts', 'elodin_gravityform_count_enqueue' );
 function elodin_gravityform_count_enqueue() {
@@ -50,9 +50,9 @@ require_once( 'lib/shortcode_goal_progress.php' );
 //* Add the updater
 require 'vendor/plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/jonschr/gravityforms-defaults',
+	'https://github.com/jonschr/elodin-gravityform-entry-count-shortcode',
 	__FILE__,
-	'gravityforms-defaults'
+	'elodin-gravityform-entry-count-shortcode'
 );
 
 // Optional: Set the branch that contains the stable release.
