@@ -39,13 +39,15 @@ function elodin_gravityform_count_enqueue() {
     // Script
     wp_enqueue_script( 'jquery' );
     wp_register_script( 'numeral', plugin_dir_url( __FILE__ ) . 'vendor/numeral/numeral.js', array( 'jquery' ), ELODIN_GFORM_COUNT_VERSION, true );
-    
-		
+    	
 }
 
 //* Includes
 require_once( 'lib/shortcode_count_number.php' );
 require_once( 'lib/shortcode_goal_progress.php' );
+
+//* Disable the "jump" on submit on all forms
+add_filter( 'gform_confirmation_anchor', '__return_false' );
 
 //* Add the updater
 require 'vendor/plugin-update-checker/plugin-update-checker.php';
