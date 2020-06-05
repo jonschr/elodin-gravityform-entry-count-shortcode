@@ -4,7 +4,9 @@ This is a relatively simple plugin that does two things:
 * Allows you to show the number of entries for a form on the frontend of the site
 * Allows you to set a goal and display a progress bar for entries (you could use this for donations)
 
-There are a few other features:
+## Features
+
+There are just a few other features (and no options at all):
 * You can preset the "start" number of entries (no one starts a tip jar completely empty)
 * If the form is submitted via ajax, the entry number will update at the same time.
  
