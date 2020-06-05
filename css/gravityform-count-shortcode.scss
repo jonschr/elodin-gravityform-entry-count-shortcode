@@ -1,0 +1,21 @@
+.goalbar {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 20px;
+    background-color: #ccc;
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+
+    .progressbar {
+        position: absolute;
+        background-color: #555;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: block;
+        border-radius: 20px;
+        transition: .3s all ease;
+    }
+}
