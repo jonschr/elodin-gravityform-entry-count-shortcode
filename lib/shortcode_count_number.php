@@ -29,10 +29,33 @@ function elodin_gforms_count_get_count( $atts ) {
     ?>
     <script>
         jQuery(document).ready(function( $ ) {
+            
+            // load a locale
+            numeral.register('locale', 'fr', {
+                delimiters: {
+                    thousands: ' ',
+                    decimal: ','
+                },
+                abbreviations: {
+                    thousand: 'k',
+                    million: 'm',
+                    billion: 'b',
+                    trillion: 't'
+                },
+                ordinal : function (number) {
+                    return number === 1 ? 'er' : 'ème';
+                },
+                currency: {
+                    symbol: '€'
+                }
+            });
+
+            // switch between locales
+            numeral.locale('fr');
         
             //* Format the number
             var thevalue = $("span.hiddencount").text();
-            var formatted = numeral( thevalue ).format('0,0');
+            var formatted = numeral( thevalue ).format();
 
             $("span.formcount").text( formatted );
         

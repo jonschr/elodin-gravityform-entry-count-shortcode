@@ -50,12 +50,12 @@ require_once( 'lib/shortcode_goal_progress.php' );
 add_filter( 'gform_confirmation_anchor', '__return_false' );
 
 //* Add the updater
-require 'vendor/plugin-update-checker/plugin-update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/jonschr/elodin-gravityform-entry-count-shortcode',
-	__FILE__,
-	'elodin-gravityform-entry-count-shortcode'
-);
+// require 'vendor/plugin-update-checker/plugin-update-checker.php';
+// $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+// 	'https://github.com/jonschr/elodin-gravityform-entry-count-shortcode',
+// 	__FILE__,
+// 	'elodin-gravityform-entry-count-shortcode'
+// );
 
-// Optional: Set the branch that contains the stable release.
-$myUpdateChecker->setBranch('master');
+// // Optional: Set the branch that contains the stable release.
+// $myUpdateChecker->setBranch('master');
